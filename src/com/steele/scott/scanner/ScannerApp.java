@@ -18,17 +18,13 @@ public class ScannerApp {
 	{
 		Scanner scanner = new Scanner();
 		Queue<String> tokens = null;
-		String print;
 		try 
 		{
 			tokens = scanner.scanForTokens();
+			System.out.println("Thank you. Outputting Tokens:");
 			while (!tokens.isEmpty())
 			{
-				print = tokens.poll();
-				if (print != null)
-				{
-					System.out.println(print);
-				}
+				System.out.println("\t" + tokens.poll());
 			}
 		}
 		catch (Exception e)
